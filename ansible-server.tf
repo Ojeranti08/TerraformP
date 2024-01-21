@@ -15,13 +15,13 @@ resource "aws_instance" "ansible-master" {
   provisioner "remote-exec" {
     inline = [
       "sudo yum -y install git",
-      "git clone https://github.com/CeeyIT-Solutions/ecomm-3.git",
-      "cd ecomm-3",
+      "git clone https://github.com/Ojeranti08/TF-Project.git",
+      "cd TF-Project",
       "sudo chmod 400 Oje.pem",
       "sudo yum -y install epel-release",
       "sudo yum -y install ansible",
-      "ansible -m ping -i /c/Users/Christy/OneDrive/ojeranti/OneDrive/Documents/Kemi-Workspace/TF-Project/aws.ini node1",
-      "ansible-playbook /c/Users/Christy/OneDrive/ojeranti/OneDrive/Documents/Kemi-Workspace/TF-Project/setup-ecomm.yaml -i /c/Users/Christy/OneDrive/ojeranti/OneDrive/Documents/Kemi-Workspace/TF-Project/aws.ini",
+      "ansible -m ping -i aws.ini node1",
+      "ansible-playbook setup-ecomm.yaml -i aws.ini",
     ]
 
     connection {
