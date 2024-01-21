@@ -20,8 +20,8 @@ resource "aws_instance" "ansible-master" {
       "sudo chmod 400 Oje.pem",
       "sudo yum -y install epel-release",
       "sudo yum -y install ansible",
-      "ansible -m ping -i aws.ini node1",
-      "ansible-playbook TF-Project/setup-ecomm.yaml -i TF-Project/aws.ini",
+      "ansible -m ping -i ./aws.ini node1",
+      "ansible-playbook ./setup-ecomm.yaml -i ./aws.ini",
     ]
 
     connection {
