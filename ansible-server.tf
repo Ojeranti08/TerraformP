@@ -21,7 +21,7 @@ resource "aws_instance" "ansible-master" {
       "sudo yum -y install epel-release",
       "sudo yum -y install ansible",
       "ansible -m ping -i aws.ini node1",
-      "ansible-playbook setup-ecomm.yaml -i aws.ini",
+      "ansible-playbook TF-Project/setup-ecomm.yaml -i TF-Project/aws.ini",
     ]
 
     connection {
