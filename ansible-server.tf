@@ -39,7 +39,7 @@ resource "aws_instance" "node1" {
   subnet_id              = aws_subnet.ecomm-public-subnet.id
   key_name               = "Oje"
   vpc_security_group_ids = [aws_security_group.ecomm-sg.id]
-  private_ip             = "10.0.1.11"
+  private_ip             = "10.0.1.13"
 
   tags = {
     Name = " Ansible Node1"

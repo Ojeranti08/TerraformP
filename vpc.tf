@@ -100,7 +100,7 @@ resource "aws_security_group" "ecomm-sg" {
   vpc_id      = aws_vpc.ecomm-vpc.id
 
   ingress {
-    description = "Allow SSH from port 22"
+    description = "Allow SSH from WWW"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
